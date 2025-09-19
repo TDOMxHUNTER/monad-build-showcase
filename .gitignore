@@ -83,6 +83,9 @@ jspm_packages/
 # Yarn Integrity file
 .yarn-integrity
 
+# Bun lock file (using npm as primary package manager)
+bun.lockb
+
 # dotenv environment variables file
 .env.test
 
