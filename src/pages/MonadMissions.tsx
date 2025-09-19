@@ -14,6 +14,7 @@ const missions = [
     description: "Showcase your smart contract expertise by creating a single contract that approaches the 128 KB compiled bytecode limit on Monad. Maximize contract size through innovation and efficiency while maintaining functionality.",
     deadline: "April 11th 2025",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1356628903015485601/1356628903334121824/image.png?ex=68bf89df&is=68be385f&hm=b5b21da44d1ba06670304e5f0e68a269da49f5158eed7d67d8b83cbbf7b04e78&=&format=webp&quality=lossless&width=900&height=900",
     rules: [
       "Single smart contract file required",
       "Must be as close to 128kb limit as possible (submissions under 100kb disqualified)",
@@ -31,6 +32,7 @@ const missions = [
     description: "Harness cutting-edge AI tools to develop an MCP server that integrates with Monad Testnet. Push the boundaries of what's possible with AI-blockchain integration.",
     deadline: "Wednesday, 30 April 2025 22:30",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1362426760821473430/1362426761664532671/image_3.png?ex=68bf898c&is=68be380c&hm=51dca938a40059592d5a6418b112a059aba3ca7e3d2866e7c36f99fe19ef2d9e&=&format=webp&quality=lossless&width=900&height=900",
     rules: [],
     submission: "Use the provided submission form",
     prizes: [
@@ -47,6 +49,7 @@ const missions = [
     description: "Explore the potential of applications with access to users' social connections. Create innovative mini-apps that leverage social graph data in unique ways.",
     deadline: "22nd May 2025, 17:00 UTC",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1367520484362813500/1367520484932980776/image.png?ex=68bf9c72&is=68be4af2&hm=659e2cc7c440a26aba97687722010115bf5d08391235c7638010a774179935b7&=&format=webp&quality=lossless&width=900&height=900",
     rules: [],
     submission: "Submit via the official form",
     prizes: [
@@ -65,6 +68,7 @@ const missions = [
     description: "Create compelling visualizations and dashboards for Monad Testnet data. Two distinct tracks allow for custom frontends or Flipside-powered dashboards.",
     deadline: "June 4 - June 18",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1379836535742136390/1379836538006798376/Main_Graphic.png?ex=68bf97aa&is=68be462a&hm=6f252fbdddd87b8e3d3b86a522ac06857ddc3790560d7bf3f472e596dfe65300&=&format=webp&quality=lossless&width=1116&height=744",
     rules: [
       "Dashboard/visualization must be publicly accessible",
       "Information displayed should be accurate and functional",
@@ -103,6 +107,7 @@ const missions = [
     description: "Develop groundbreaking NFTs and create tools that address real problems. Focus on novel mechanics and unique implementations rather than basic collections.",
     deadline: "June 23 - July 7",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1386725062026989758/1386725062287167639/mnga.png?ex=68bf9a9a&is=68be491a&hm=72d1e62e6dd9e721b0a62119a95447d411a93991f50ca10eaf8f169d3b01c7b8&=&format=webp&quality=lossless&width=600&height=338",
     rules: [
       "All submissions must be open source",
       "Teams of 2-3 people or individual participation allowed",
@@ -144,6 +149,7 @@ const missions = [
     description: "Build innovative applications and games utilizing Multisynq technology. Create novel integrations that interact with Monad Testnet in creative ways.",
     deadline: "July 14 - July 27",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1394341391244726505/1394341391479472170/mission-6-graphic.png?ex=68bfa05d&is=68be4edd&hm=ee68ea1ec6aa2e7801d8d97175255c479c51803e1d941aac677fff91de078429&=&format=webp&quality=lossless&width=1113&height=744",
     rules: [
       "Project must be open source",
       "Must use Multisynq in an innovative way",
@@ -168,6 +174,7 @@ const missions = [
     description: "Build games with a HUGE leaderboard intergrating Monad Games ID",
     deadline: "Aug 13 - Aug 31",
     status: "completed",
+    image: "https://media.discordapp.net/attachments/1405204817672016016/1405204818242572440/image_3.png?ex=68bf98b8&is=68be4738&hm=f5afde1879f1f62be475ca1ab1777aa60c341cb7c72a0b5bf6dc5baddb7c7e47&=&format=webp&quality=lossless&width=1110&height=744",
     rules: [
       "All submissions must be open source",
       "Properly intergrate Monad Games ID",
@@ -255,7 +262,18 @@ const MonadMissions = () => {
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="space-y-6">
+                <CardContent className="space-y-4">
+                  {/* Mission Image */}
+                  {mission.image && (
+                    <div className="w-full">
+                      <img 
+                        src={mission.image} 
+                        alt={`${mission.title} mission graphic`}
+                        className="w-full h-auto rounded-lg object-cover"
+                      />
+                    </div>
+                  )}
+
                   {/* Rules */}
                   {mission.rules && mission.rules.length > 0 && (
                     <div>
